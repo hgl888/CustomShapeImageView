@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
 import android.graphics.Xfermode;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -87,6 +88,7 @@ public abstract class BaseImageView extends ImageView {
 //                        mBitmapShader = new BitmapShader(mMaskBitmap,
 //                                Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
 //                        mPaint.setShader(mBitmapShader);
+
                         bitmapCanvas.drawBitmap(mMaskBitmap, 0.0f, 0.0f, mPaint);
 
                         mWeakBitmap = new WeakReference<>(bitmap);
@@ -97,6 +99,7 @@ public abstract class BaseImageView extends ImageView {
                 if (bitmap != null) {
                     mPaint.setXfermode(null);
 //                    mPaint.setShader(null);
+//                    Rect rect = new Rect(20, 20, 160, 160);
                     canvas.drawBitmap(bitmap, 0.0f, 0.0f, mPaint);
                     return;
                 }

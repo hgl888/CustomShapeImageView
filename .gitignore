@@ -29,3 +29,5 @@ proguard/
 .idea/
 .DS_Store
 library/.settings
+.gradle
+build
